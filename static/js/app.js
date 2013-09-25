@@ -1,7 +1,7 @@
 var APP = APP || {};
-//De variable APP is gelijk aan een object APP of een leeg Object.
+// De variable APP is gelijk aan een object APP of een leeg Object
 
-//namespace is een nieuw object die ervoor zorgt dat je geen conflicten voororrzaakt door je code af te schermen van de rest
+// Namespace is een nieuw object die ervoor zorgt dat je geen conflicten voororrzaakt door je code af te schermen van de rest
 
 (function () {
 	//Dit is een naamloze functie, tussen je haakjes zet je argumenten
