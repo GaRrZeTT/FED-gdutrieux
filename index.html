@@ -3,42 +3,56 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Web App Skeleton v 0.3</title>
+	<title>Scoring App Tournament</title>
 	<link href="static/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<header>
-		<img src="media/images/skeleton.png" alt="Web App Skeleton" data-source="http://www.gettyicons.com/free-icon/119/halloween-icon-set/free-skull-icon-png/">
-		<h1>Web App Skeleton</h1>
 		<nav>
 			<ul>
-				<li><a href="#/page1" data>Pagina 1</a></li>
-				<li><a href="#/page2">Pagina 2</a></li>
-				<li><a href="#/page3">Pagina 3</a></li>
+				<li><a href="#/schedule" data>Schedule</a></li>
+				<li><a href="#/game">Game</a></li>
+				<li><a href="#/ranking">Ranking</a></li>
 		    </ul>
 		</nav>
 	</header>
 	
 	<article id="content" class="col">
-		<section data-route="page1" class="active">
+		<section data-route="schedule" class="active">
 			<h1 data-bind="title"></h1>
 			<p data-bind="description"></p>
-			 <section data-bind="items">
-			    <section>
-			      <h1 data-bind="title"></h1>
-			      <p data-bind="description"></p>
-			    </section>
-			  </section>
+			 	<table data-bind="items">
+			   		<tr>
+			    		 <td data-bind="thuis"></td>
+			    		 <td data-bind="uit"></td>
+			    		 <td data-bind="datum"></td>
+			  	  	</tr>
+			 	</table>
 		</section>
 
-		<section data-route="page2">
+		<section data-route="game">
 			<h1 data-bind="title"></h1>
 			<p data-bind="description"></p>
+				<table data-bind="items">
+			   		<tr>
+			    		 <td data-bind="team"></td>
+			    		 <td data-bind="points"></td>
+			    		 <td data-bind="fouten"></td>
+			    		 <td data-bind="freethrows"></td>
+			  	  	</tr>
+			 	</table>
 		</section>
 
-		<section data-route="page3">
+		<section data-route="ranking">
 			<h1 data-bind="title"></h1>
 			<p data-bind="description"></p>
+				<table data-bind="items">
+			   		<tr>
+			    		 <td data-bind="nummer"></td>
+			    		 <td data-bind="team"></td>
+			    		 <td data-bind="punten"></td>
+			  	  	</tr>
+			 	</table>
 		</section>
 	</article>
 

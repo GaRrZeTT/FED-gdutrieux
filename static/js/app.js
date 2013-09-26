@@ -6,37 +6,108 @@ var APP = APP || {};
 (function () {
 	//Dit is een naamloze functie, tussen je haakjes zet je argumenten
 	// Data objecten
-	APP.page1 = {
+	APP.schedule = {
 	//Dit is een Json object, binnen de namespace APP
-		title:'Pagina 1',
-		description:'Pagina 1 is de eerste pagina',
+		title:'Schedule',
+		description:'Schematisch overzicht',
 		items: [
 			{
-				title: 'Item 1',
-				description: 'Item 1 is het eerste item'
-			}, {
-				title: 'Item 2',
-				description: 'Item 2 is het tweede item'
-			}, {
-				title: 'Item 3',
-				description: 'Item 3 is het derde item'
-			}, {
-				title: 'Item 4',
-				description: 'Item 4 is het vierde item'
+				thuis: 'Raiders',
+				uit: 'Panthers',
+				datum: '21-10-2013'
+			},
+			{
+				thuis: 'Panthers',
+				uit: 'Lions',
+				datum: '27-10-2013'
+			},
+			{
+				thuis: 'Lions',
+				uit: 'Catfish',
+				datum: '30-10-2013'
+			},
+			{
+				thuis: 'Castfish',
+				uit: 'Monkeys',
+				datum: '3-11-2013'
+			},
+			{
+				thuis: 'Monkeys',
+				uit: 'Raiders',
+				datum: '7-11-2013'
 			}
 		]
 	};
 
-	APP.page2 = {
+	APP.game = {
 	//Dit is ook een object in APP
-		title:'Pagina 2',
-		description:'Pagina 2 is de tweede pagina'
+		title:'Game',
+		description:'Overzicht punten en fouten',
+		items: [
+			{
+				team: 'Raiders',
+				points: '280',
+				fouten: '16',
+				freethrows: '12'
+			},
+			{
+				team: 'Panthers',
+				points: '200',
+				fouten: '16',
+				freethrows: '12'
+			},
+			{
+				team: 'Lions',
+				points: '180',
+				fouten: '10',
+				freethrows: '1'
+			},
+			{
+				team: 'Monkeys',
+				points: '180',
+				fouten: '0',
+				freethrows: '5'
+			},
+			{
+				team: 'Catfish',
+				points: '100',
+				fouten: '16',
+				freethrows: '9'
+			}
+		]
 	};
 
-	APP.page3 = {
+	APP.ranking = {
 	//Dit is ook een object in app
-		title:'Pagina 3',
-		description:'Pagina 3 is de derde pagina'
+		title:'Ranking',
+		description:'Overzicht standen',
+		items: [
+			{
+				nummer: '1',
+				team: 'Raiders',
+				punten: '12 punten'
+			},
+			{
+				nummer: '2',
+				team: 'Panthers',
+				punten: '9 punten'
+			},
+			{
+				nummer: '3',
+				team: 'Lions',
+				punten: '4 punten'
+			},
+			{
+				nummer: '4',
+				team: 'Monkeys',
+				punten: '4 punten'
+			},
+			{
+				nummer: '5',
+				team: 'Catfish',
+				punten: '0 punten'
+			}
+		]
 	};
 	
 	// Controller Init
@@ -55,18 +126,18 @@ var APP = APP || {};
 			//Hier roepen we routie aan, het is altijd page 1,2 of 3. Dus render een pagina met als string pag 1 erbij
 			// Als page 1 in de URL voeren deze functie uit en je voert dan gelijk de render function uit.
 	  		routie({
-			    '/page1': function() {
-			    	APP.page.render('page1');
+			    '/schedule': function() {
+			    	APP.page.render('schedule');
 				},
-			    '/page2': function() {
-			    	APP.page.render('page2');
+			    '/game': function() {
+			    	APP.page.render('game');
 			    },
 
-			    '/page3': function() {
-			    	APP.page.render('page3');
+			    '/ranking': function() {
+			    	APP.page.render('ranking');
 			    },
 			    '*': function() {
-			    	APP.page.render('page1');
+			    	APP.page.render('schedule');
 			    }
 			});
 		},
